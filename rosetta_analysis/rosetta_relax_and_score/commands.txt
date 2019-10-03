@@ -1,0 +1,4 @@
+rosetta_scripts.default.linuxgccrelease -s "../redo-ncs_real_space_refined.pdb" -parser:protocol "relax_cst.xml"
+
+
+residue_energy_breakdown.linuxgccrelease -database ~/rosetta_bin_linux_2018.33.60351_bundle/main/database -in:file:s redo-ncs_real_space_refined_0001_relax_restrained_0001_0001_0001_0001_0001.pdb -out:file:silent energy_breakdown_SC-free.out

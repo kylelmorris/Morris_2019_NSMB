@@ -1,0 +1,30 @@
+# All these commands can be called in sequence from a master script,
+# but these are the individual processes required:
+# In the directory above this one you need to run the script
+bash setup.sh
+# in order to get the PDB file clean and also converted to mol2 for 
+# part of the subsequent processing
+
+# Next we define the windows with:
+bin/mk_wins < ../hub_padded_80.pdb
+# run in this directory and prodcing the file: all_windows.txt
+#
+# N.B. If the BUDE executable, bude, is intalled in a non standard
+# location (and is not in your path) you will need to add the 
+# location in the file: run_bude_scan.sh
+# Now run the bude scanning job, either interactively
+bash run_bude_scan.sh > window_5_inter-hub.out
+# Or protected in the background
+# nohup bash run_bude_scan.sh > window_5_inter-hub.out &
+#
+# When that is done (about 45 mins), split the output into the seperate chains
+bash  split_results.sh
+# This puts the energy per window data in sub-directory: windows/
+#
+# Plotting the results:
+# gnuplot must be installed
+# ps2pdf also, if you want pdfs
+# gimp if you want to convert the postscript to .ps to .png files
+cd plots
+bash do_plot.sh
+cd ../

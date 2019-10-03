@@ -1,0 +1,22 @@
+FIRST ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "../redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined.pdb" -parser:protocol "relax_cst.xml"
+
+renamed nohup.out to first_round_relax_restrained.log
+renamed score.sc first_round_score.sc
+
+SECOND ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined_0001.pdb" -parser:protocol "relax_cst.xml" 
+
+THIRD ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined_0001_0001.pdb" -parser:protocol "relax_cst.xml" 
+
+FOURTH ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined_0001_0001_0001.pdb" -parser:protocol "relax_cst.xml" 
+
+FIFTH ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined_0001_0001_0001_0001.pdb" -parser:protocol "relax_cst.xml" 
+
+SIXTH ROUND
+ nohup rosetta_scripts.default.linuxgccrelease -s "redo-ncs_real_space_refined_chain-coot-0-chimera-0_real_space_refined_0001_0001_0001_0001_0001.pdb" -parser:protocol "relax_cst-SC_only.xml"
+
+

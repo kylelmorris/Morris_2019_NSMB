@@ -1,0 +1,3 @@
+# If you need to recompile the fortran utilities because you have 
+# modified them or you need a system comaptible exec justy do:
+bash compile.sh

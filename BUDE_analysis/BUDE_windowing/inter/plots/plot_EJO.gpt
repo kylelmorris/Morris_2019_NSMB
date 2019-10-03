@@ -1,0 +1,13 @@
+set yrange [-15:10]
+#set yrange [-150:250]
+#set xrange [0:100]
+set xlabel "Window number"
+set ylabel "energy kJ/mol"
+set title "EJO: redo-ncs_real_space_refined.pdb"
+set size 1.0,0.45
+set key off
+set terminal postscript portrait color "Helvetica" 16 lw 2
+set output "EJO-energy-w5.ps"
+plot "../windows/E-w5.txt" using 2:($5/5)  with lines lw 1 lt 1 lc 1,  \
+ "../windows/J-w5.txt" using 2:($5/5)  with lines lw 1 lt 1 lc 2, \
+ "../windows/O-w5.txt" using 2:($5/5)  with lines lw 1 lt 1 lc 3 

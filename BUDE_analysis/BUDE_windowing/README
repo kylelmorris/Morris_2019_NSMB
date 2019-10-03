@@ -1,0 +1,16 @@
+# Copy the pdb file of interest into here and run
+
+bash setup.sh
+
+# this cleans the pdb file for BUDE and creates the mol2 format file that one 
+# of the utilities uses
+
+# Once this script has run successfully you will have 4 new files:
+#
+hub.pdb
+hub.mol2
+hub_padded_80.pdb
+hub_padded_80.mol2
+#
+# Now cd to inter/ and read the README 
+#

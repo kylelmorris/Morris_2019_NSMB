@@ -1,0 +1,2 @@
+Compile fortran programs with
+$ gfortran-6 -o mk_bild_Pax3 mk_bild_Pax3.f

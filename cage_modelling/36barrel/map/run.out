@@ -1,0 +1,24 @@
+== Reading input half-reconstructions: 
+  + half1-map:                     ./Refine3D/job051/run_ct2_half1_class001_unfil.mrc
+  + half2-map:                     ./Refine3D/job051/run_ct2_half2_class001_unfil.mrc
+== Using a user-provided mask ... 
+  + input mask:                    ./MaskCreate/job056/mask.mrc
+== Masking input maps ...
+  + randomize phases beyond:       27.5 Angstroms
+== Dividing map by the MTF of the detector ...
+  + mtf STAR-file:                 MTF-FII-300kV.star
+== Applying sqrt(2*FSC/(FSC+1)) weighting (as in Rosenthal & Henderson, 2003) ...
+== Fitting straight line through Guinier plot to find B-factor ...
+  + fit from resolution:           10
+  + fit until resolution:          0
+  + slope of fit:                  -189.044
+  + intercept of fit:              -12.0318
+  + correlation of fit:            0.461695
+  + apply b-factor of:             -756.177
+== Low-pass filtering final map ... 
+  + filter frequency:              12.1786
+== Writing out put files ...
+  + Processed map:                 PostProcess/job061/postprocess.mrc
+  + Processed masked map:          PostProcess/job061/postprocess_masked.mrc
+  + Metadata file:                 PostProcess/job061/postprocess.star
+  + FINAL RESOLUTION:              12.1786
