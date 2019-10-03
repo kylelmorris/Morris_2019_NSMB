@@ -1,25 +1,0 @@
-Run in the following order with either bash, chimera or python
-
-#Script to build rough cage
-0_build.py
-
-#Script to refine the fragment fitting ready for angular measurements1_build_final_fragment_fit.py
-
-#Script to align all triskelia and measure their angles2_build_final_measure_angles.py
-
-#Script to sort the triskelia into their respective geometries, aggregating angle data3_build_final_geometry_sort.sh
-
-#Script to plot angle measurements from Richard Sessions angle measurement4_build_final_geometry_plot_angles.py5_build_final_geometry_plot_torsions.py
-
-#Script to check in each geometry if triskelia have the same conformation
-#Also makes movies of leg fit6_build_final_geometry_RMSD_mapCC.py7_build_final_geometry_RMSD_mapCC_analyse.sh
-
-#Script to measure contacts8_build_final_contacts.py9_build_final_geometry_contacts.py
-
-#Script to produce cage movies and images for paper10_build_final_make_movies.py11_leg_and_cage_images.py11_leg_and_cage_images.pyc
-
-# Directory structure output (I: input, O: output)
-
-./chimera				# O: Chimera session files for building stages./map					# I: Map for fitting./PDB					# I: Starting PDB from which to build legs./PDB_built				# O: Legs built by structural alignment of overlaps./PDB_built_final			# O: Legs built by rigid body fitting to map./PDB_built_final_angles		# O: Leg angles./PDB_built_final_calpha		# O: Legs built by rigid body fitting to map, c-alpha./PDB_built_final_calpha_TD		# O: Legs built by rigid body fitting to map, c-alpha, including terminal domain from 3IYV./PDB_built_final_contacts		# O: Contacts between legs, including plots./PDB_built_final_geometry		# O: Legs built by rigid body fitting to map
-					#	Organised by geometry and including
-					#	CC to map, RMSD between legs, angles./PDB_built_final_geometry_all		# O: Images and movies of fit to map./PDB_built_final_geometry_plots	# O: Leg angle tab delimited data and plots./PDB_improved				# O: Rigid body local map fits of the starting PDBs./scripts				# I: Scripts for all building and analysis
